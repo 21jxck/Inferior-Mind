@@ -95,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _checkWin() {
     setState(() {
       _printDebug();  // stampa debug sulla console
+
       // controlla che tutti i colori dei bottoni combacino con quelli della combinazione vincente
       if (defaultButtonColor1 == winningColors[0] &&
           defaultButtonColor2 == winningColors[1] &&
@@ -103,13 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
         _win = "YOU WON!";
       } else {
         _win = "You Lost! :(";
-      }
 
-      // riporto i bottoni grigi
-      defaultButtonColor1 = const Color.fromARGB(221, 95, 92, 92);
-      defaultButtonColor2 = const Color.fromARGB(221, 95, 92, 92);
-      defaultButtonColor3 = const Color.fromARGB(221, 95, 92, 92);
-      defaultButtonColor4 = const Color.fromARGB(221, 95, 92, 92);
+        // resetta pulsanti e indici
+        defaultButtonColor1 = const Color.fromARGB(221, 95, 92, 92);
+        defaultButtonColor2 = const Color.fromARGB(221, 95, 92, 92);
+        defaultButtonColor3 = const Color.fromARGB(221, 95, 92, 92);
+        defaultButtonColor4 = const Color.fromARGB(221, 95, 92, 92);
+        indexcolorList = [0, 0, 0, 0];
+      }
     });
   }
 
