@@ -5,12 +5,14 @@ void main() {
   runApp(const MyInferiorMind());
 }
 
+// classe estendente StatelessWidget (widget immutabile)
 class MyInferiorMind extends StatelessWidget {
   const MyInferiorMind({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // titolo applicazione
       title: 'InferiorMind!!',
       theme: ThemeData(
         colorSchemeSeed: Colors.indigo,
@@ -28,6 +30,7 @@ class MyInferiorMind extends StatelessWidget {
   }
 }
 
+// classe estendente StatefulWidget (widget mutabile)
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
@@ -37,6 +40,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // metodo che viene eseguito una volta sola prima del primo build
   @override
   void initState() {
     _generateWinningCombination();
